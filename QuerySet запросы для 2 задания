@@ -1,0 +1,13 @@
+Использованные QuerySet запросы:
+from task1.models import Game, Buyer
+Buyer.objects.create(name='Roman', balance=1500.05, age=24)
+Buyer.objects.create(name='Vimavo', balance=4220.36, age=22)
+Buyer.objects.create(name='Vimavo_mini', balance=40, age=12)
+Game.objects.create(title='cyberpunk 2077', cost=30, size=46.2, description='This is cyberpunk 2077', age_limited=True)
+Game.objects.create(title='STALKER HOC', cost=25, size=160, description='S.T.A.L.K.E.R. 2', age_limited=False)
+Game.objects.create(title='Super cow', cost=1.2, size=2, description='Super cow', age_limited=True)
+first, second, third = Buyer.objects.all()
+first_game, second_game, third_game = Game.objects.all()
+first_game.buyer.set((first, second))
+second_game.buyer.set((second, third))
+third_game.buyer.set((first, second))
