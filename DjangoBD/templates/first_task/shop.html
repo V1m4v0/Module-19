@@ -1,0 +1,10 @@
+{% extends "C:\Users\Vimavo\PycharmProjects\Module 19\DjangoBD\templates\first_task\menu.html" %}
+
+{% block pagename %}
+    Игры
+{% endblock %}
+{% block content %}
+    {% for i in games %}
+        <li> {{ i.title }}|{{ i.description }} Стоимость {{ i.cost }} <button>Купить</button></li>
+    {% endfor %}
+{% endblock %}
