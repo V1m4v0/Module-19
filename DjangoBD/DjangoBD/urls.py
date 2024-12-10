@@ -24,5 +24,5 @@ urlpatterns = [
     path('platform/', platform),
     path('basket/', basket),
     path('', sign_up_by_django),
-
+    path('platform/news/', view_news),
 ]
