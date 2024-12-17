@@ -23,3 +23,13 @@ class News(models.Model):
     title = models.CharField(max_length=30, help_text='Заголовок новости')
     content = models.TextField(help_text='Содержание новости')
     date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+class new_table(models.Model):
+    table_name = models.CharField(max_length=22)
+    contents = models.TextField
+
+    def __str__(self):
+        return self.name
